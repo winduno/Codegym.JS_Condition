@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <style>
+        body{
+            color: blue;
+            text-align: center;
+        }
+        td{
+            padding: 5px;
+            width: 25%;
+            border: royalblue 1px solid;
+        }
+        input{
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+<form id="form">
+    <table>
+        <tr>
+            <td colspan="4">
+                <input type="text" disabled id="display">
+            </td>
+        </tr>
+        <tr>
+            <td onclick="number(1)">1</td>
+            <td onclick="number(2)">2</td>
+            <td onclick="number(3)">3</td>
+            <td onclick="clickMethod('add')">+</td>
+        </tr>
+        <tr>
+            <td onclick="number(4)">4</td>
+            <td onclick="number(5)">5</td>
+            <td onclick="number(6)">6</td>
+            <td onclick="clickMethod('sub')">-</td>
+        </tr>
+        <tr>
+            <td onclick="number(7)">7</td>
+            <td onclick="number(8)">8</td>
+            <td onclick="number(9)">9</td>
+            <td onclick="clickMethod('mul')">x</td>
+        </tr>
+        <tr>
+            <td onclick="reset()">C</td>
+            <td onclick="number(0)">0</td>
+            <td onclick="calculate()">=</td>
+            <td onclick="clickMethod('div')">/</td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
+<script>
+    let addedMethod = false;
+    let addedNumber = false;
+    function number(value){
+        document.getElementById("display").value += value;
+        addedNumber = true;
+    }
+
+    function clickMethod(clicked) {
+        let value;
+        if ((addedMethod == false) && (addedNumber == true)){
+            switch (clicked) {
+                case 'add':
+                    value = " + ";
+                    addedMethod = true;
+                    break;
+                case 'sub':
+                    value = " - ";
+                    addedMethod = true;
+                    break;
+                case 'mul':
+                    value = " * ";
+                    addedMethod = true;
+                    break;
+                case 'div':
+                    value = " / ";
+                    addedMethod = true;
+                    break;
+            }
+            document.getElementById("display").value += value;
+        }
+    }
+
+    function calculate() {
+        let value = eval(document.getElementById("display").value).toString();
+        document.getElementById("display").value = value;
+        addedMethod = false;
+        addedNumber = false;
+    }
+    function reset() {
+        document.getElementById("form").reset();
+    }
+</script>

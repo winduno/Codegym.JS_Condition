@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DoYouLoveMe</title>
+    <style>
+        body{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<h1>Do you love me??</h1>
+<button id="yes" onclick="love()">Yes</button>    <button id="no" onmouseover="leave()" style="position: absolute; margin-left: 10px">No</button>
+</body>
+</html>
+<script>
+    let width = window.innerWidth;
+    let height = window.innerHeight;
+    function love() {
+        alert("<3");
+    }
+
+    function leave() {
+        let noButton = document.getElementById("no");
+        noButton.style.left = parseInt(Math.random() * width) + "px";
+        noButton.style.top = parseInt(Math.random() * height) + "px";
+    }
+</script>

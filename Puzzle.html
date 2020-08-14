@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Puzzle</title>
+    <style>
+        body{
+            text-align: center;
+            padding: 10px;
+        }
+        .glow {
+            font-size: 80px;
+            color: #fff;
+            text-align: center;
+            -webkit-animation: glow 1s ease-in-out infinite alternate;
+            -moz-animation: glow 1s ease-in-out infinite alternate;
+            animation: glow 1s ease-in-out infinite alternate;
+        }
+
+        @-webkit-keyframes glow {
+            from {
+                box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+            }
+            to {
+                box-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+            }
+        }
+    </style>
+</head>
+<body onload="init()">
+<div>
+    <img src="image/cat1_part1x1.jpg" alt="cat1" id="img1" width="800" height="160" onclick="change(1)"> <br>
+    <img src="image/cat1_part1x1.jpg" alt="cat1" id="img2" width="800" height="160" onclick="change(2)"> <br>
+    <img src="image/cat1_part1x1.jpg" alt="cat1" id="img3" width="800" height="160" onclick="change(3)"> <br>
+    <img src="image/cat1_part1x1.jpg" alt="cat1" id="img4" width="800" height="160" onclick="change(4)"> <br>
+    <img src="image/cat1_part1x1.jpg" alt="cat1" id="img5" width="800" height="160" onclick="change(5)"> <br>
+</div>
+
+</body>
+</html>
+<script>
+    function random() {
+        let random = Math.floor(Math.random() * 3) + 1;
+        return random;
+    }
+
+    function path() {
+        let number = random();
+        number++;
+        if (number > 3) number = 1;
+
+        switch (number) {
+            case 1:
+                number = "cat1";
+                break;
+            case 2:
+                number = "panda";
+                break;
+            case 3:
+                number = "monkey";
+                break;
+        }
+        return number;
+    }
+
+    function init(){
+        let ani;
+        ani = path();
+        document.getElementById("img1").src = "image/" + ani + "_part1x1.jpg";
+        document.getElementById("img1").alt = ani;
+        ani = path();
+        document.getElementById("img2").src = "image/" + ani + "_part2x1.jpg";
+        document.getElementById("img2").alt = ani;
+        ani = path();
+        document.getElementById("img3").src = "image/" + ani + "_part3x1.jpg";
+        document.getElementById("img3").alt = ani;
+        ani = path();
+        document.getElementById("img4").src = "image/" + ani + "_part4x1.jpg";
+        document.getElementById("img4").alt = ani;
+        ani = path();
+        document.getElementById("img5").src = "image/" + ani + "_part5x1.jpg";
+        document.getElementById("img5").alt = ani;
+    }
+
+    function correct() {
+        let element1 = document.getElementById("img1");
+        let element2 = document.getElementById("img2");
+        let element3 = document.getElementById("img3");
+        let element4 = document.getElementById("img4");
+        let element5 = document.getElementById("img5");
+
+        let alt1 = (element1.alt == element2.alt)? true : false;
+        let alt2 = (element2.alt == element3.alt)? true : false;
+        let alt3 = (element3.alt == element4.alt)? true : false;
+        let alt4 = (element4.alt == element5.alt)? true : false;
+        let alt5 = (element5.alt == element1.alt)? true : false;
+
+
+        if (alt1 && alt2 && alt3 && alt4 && alt5) {
+            element1.classList.add("glow");
+            element2.classList.add("glow");
+            element3.classList.add("glow");
+            element4.classList.add("glow");
+            element5.classList.add("glow");
+        }
+        else {
+            element1.classList.remove("glow");
+            element2.classList.remove("glow");
+            element3.classList.remove("glow");
+            element4.classList.remove("glow");
+            element5.classList.remove("glow");
+        }
+    }
+
+    function change(vari) {
+        let ani = path();
+        document.getElementById("img" + vari).src = "image/" + ani + "_part" + vari + "x1.jpg";
+        document.getElementById("img" + vari).alt = ani;
+        correct();
+    }
+</script>

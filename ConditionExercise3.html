@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ConditionExercise3</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let value = parseFloat(prompt("Nhập 1 số đi anh zai!!"));
+    let condition = true;
+
+    switch (condition) {
+        case (value < 0 && value.isInteger):
+            document.write("Số âm");
+            break;
+        case (value > 0 && value.isInteger):
+            document.write("Số dương");
+            break;
+        case (value == 0 && value.isInteger):
+            document.write("Số 0");
+            break;
+        default:
+            document.write("Ca này chịu!!");
+            break;
+
+    }
+</script>

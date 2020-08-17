@@ -113,7 +113,18 @@
     }
 
     function change(vari) {
-        let ani = path();
+        let ani = document.getElementById("img" + vari).alt;
+        switch (ani) {
+            case "cat1":
+                ani = "panda";
+                break;
+            case "panda":
+                ani = "monkey";
+                break;
+            case "monkey":
+                ani = "cat1";
+                break;
+        }
         document.getElementById("img" + vari).src = "image/" + ani + "_part" + vari + "x1.jpg";
         document.getElementById("img" + vari).alt = ani;
         correct();

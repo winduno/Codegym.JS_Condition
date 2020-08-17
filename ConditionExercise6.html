@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ConditionExercise6</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let FIVE_PERCENT_AWARD = 0.05;
+    let TEN_PERCENT_AWARD = 0.1;
+    let TWENTY_PERCENT_AWARD = 0.2;
+
+    let level1 = 0.5;
+    let level2 = 0.75;
+    let level3 = 0.9;
+
+    let result;
+
+    let target = parseFloat(prompt("Chỉ tiêu là bao nhiêu anh zai??"));
+    let reached = parseFloat(prompt("Thế đạt bao nhiêu rồi???"));
+
+    let award1 = target * level1;
+    let award2 = target * level2;
+
+    if (Number.isInteger(target) && Number.isInteger(reached)){
+        if (reached < target * level1) result = " chịu, làm thế mà đòi hoa hồng.";
+        else if (reached < target * level2) result = award1 * FIVE_PERCENT_AWARD;
+        else if (reached < target * level3) result = award1 * FIVE_PERCENT_AWARD + (reached - award1) * TEN_PERCENT_AWARD;
+        else result = award1 * FIVE_PERCENT_AWARD + (award2 - award1) * TEN_PERCENT_AWARD + (reached - award2) * TWENTY_PERCENT_AWARD;
+    }
+    else {
+        result = " nhập sai mà đòi tính cái gì??";
+    }
+
+    // alert("Hoa hồng: " + result);
+    alert(result);
+</script>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ConditionExercise5</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let diem1 = parseFloat(prompt("Nhập điểm bài kiểm tra (Hệ số 1) đi bro!!"));
+    let diem2 = parseFloat(prompt("Nhập điểm bài giữa kỳ (Hệ số 2) nữa bro!!"));
+    let diem3 = parseFloat(prompt("Chưa xong đâu còn bài cuối kỳ (Hệ số 3 nữa đấy bro!!"));
+    
+    function markAvg(mark1, mark2, mark3) {
+        if (Number.isInteger(mark1) && Number.isInteger(mark2) && Number.isInteger(mark3)){
+            if ((0 <= mark1 <= 100) && (0 <= mark2 <= 100) && (0 <= mark3 <= 100)) return (mark1 + mark2 * 2 + mark3 * 3)/6;
+        }
+    }
+
+    let rank = markAvg(diem1, diem2, diem3);
+
+    if (rank <= 40) alert("Yếu");
+    else if (rank <= 60) alert("Trung bình");
+    else if (rank <= 80) alert("Khá");
+    else if (rank < 100) alert("Giỏi");
+    else alert("Cố tình nhập sai nhá!! Nhớ rồi nhá!!");
+</script> 

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ConditionExercise2_7</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    alert("Giải phương trình bậc 2");
+    let a = parseFloat(prompt("Nhập a đê bạn hiền!!"));
+    let b = parseFloat(prompt("Giờ đến b nhé!!"));
+    let c = parseFloat(prompt("c là số cuối cùng này!!"));
+    let result1, result2;
+    let delta;
+
+    if (!isNaN(a) && !isNaN(b) && !isNaN(c)) {
+        if (a == 0) {
+            if (b == 0) {
+                if (c == 0) {
+                    result1 = "úi xời, vô số nghiệm";
+                } else {
+                    result1 = "ơ chịu rồi, quả này vô nghiệm";
+                }
+            } else {
+                result1 = -c / b;
+            }
+        } else {
+            delta = b * b - (4 * a * c);
+            if (delta < 0) {
+                result1 = "nói thật là phương trình làm gì có nghiệm";
+            } else if (delta == 0) {
+                result1 = -b / (2 * a);
+            } else {
+                result1 = (-b - Math.sqrt(delta)) / (2 * a);
+                result2 = (-b + Math.sqrt(delta)) / (2 * a);
+
+            }
+        }
+
+        if ((a != 0) && (delta > 0)) document.write("Phương trình có 2 nghiệm là: " + result1 + " và " + result2);
+        else document.write("Nghiệm của phương trình là: " + result1);
+    }
+    else {
+        document.write("Nhập sai rồi ông ơiiiiii");
+    }
+</script>

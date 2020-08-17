@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ConditionExercise2_8</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let a = parseFloat(prompt("Nhập số a đi!!"));
+    let b = parseFloat(prompt("Số b, nhanh!"));
+    let c = parseFloat(prompt("Còn số c, nhập nốt đê!!"));
+    let result = "Đã bảo là nhập số cơ mà";
+
+    if (!isNaN(a) && !isNaN(b) && !isNaN(c)){
+        if ((a > 0) && (b > 0) && (c > 0)){
+            if ((a + b > c) && (c + b > a) &&(a + c > b)){
+                result = "Đúng tam giác rồi đấy";
+            }
+            else {
+                result = "Tam giác gì cái mớ này";
+            }
+        }
+        else {
+            result = "Số dương cha nội ơiiiiii";
+        }
+    }
+    alert(result);
+</script>

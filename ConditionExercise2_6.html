@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ConditionExercise2_6</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    alert("Giải phương trình bậc 1:");
+    let a = parseFloat(prompt("Nhập số a đi anh zai!!"));
+    let b = parseFloat(prompt("Số b nữa"));
+    let result = "Nhập thế thì chịu luôn rồi";
+
+    if (!isNaN(a) && !isNaN(b)) {
+        if (a == 0) {
+            if (b == 0) {
+                result = "Úi xời, vô số nghiệm";
+            } else {
+                result = "Ơ chịu rồi, quả này vô nghiệm";
+            }
+        }
+        else {
+            result = -b / a;
+        }
+    }
+    alert(result);
+
+</script>

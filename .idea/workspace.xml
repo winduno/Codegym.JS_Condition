@@ -2,15 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0c7f8600-6794-4752-a9e1-a0164be6c5e9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ConditionExercise1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ConditionExercise2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ConditionExercise3.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ConditionExercise4.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ConditionExercise5.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ConditionExercise6.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ConditionExercise7.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ConditionExercise2_1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ConditionExercise2_2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ConditionExercise2_3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ConditionExercise2_4.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ConditionExercise2_5.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ConditionExercise2_6.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ConditionExercise2_7.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ConditionExercise2_8.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Puzzle.html" beforeDir="false" afterPath="$PROJECT_DIR$/Puzzle.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConditionExercise1.html" beforeDir="false" afterPath="$PROJECT_DIR$/ConditionExercise1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConditionExercise2.html" beforeDir="false" afterPath="$PROJECT_DIR$/ConditionExercise2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConditionExercise3.html" beforeDir="false" afterPath="$PROJECT_DIR$/ConditionExercise3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConditionExercise4.html" beforeDir="false" afterPath="$PROJECT_DIR$/ConditionExercise4.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConditionExercise5.html" beforeDir="false" afterPath="$PROJECT_DIR$/ConditionExercise5.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConditionExercise6.html" beforeDir="false" afterPath="$PROJECT_DIR$/ConditionExercise6.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConditionExercise7.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +68,7 @@
       <workItem from="1597367803586" duration="12955000" />
       <workItem from="1597463868075" duration="10153000" />
       <workItem from="1597504818420" duration="1181000" />
+      <workItem from="1597627626593" duration="4603000" />
     </task>
     <servers />
   </component>

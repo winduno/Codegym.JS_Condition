@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ConditionExercise2_5</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let canh1 = parseFloat(prompt("Nhập 1 cạnh đi anh zai!!"));
+    let canh2 = parseFloat(prompt("Nhập nốt cạnh kia đi thôi!!"));
+    let result = "Thôi chịu rồi ông ei, nhập lại đi!!";
+
+    if (!isNaN(canh1) && !isNaN(canh2)){
+        result = (canh2 * canh1) / 2;
+        alert("Diện tích là: " + result);
+    }
+    else {
+        alert(result);
+    }
+</script>
